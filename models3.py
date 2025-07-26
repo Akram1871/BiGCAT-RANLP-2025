@@ -8,6 +8,7 @@ from transformers import AutoModel
 from torch_geometric.utils import dense_to_sparse
 from base import BaseModel
 from torch_geometric.nn import GCNConv, GatedGraphConv, global_max_pool
+from huggingface_hub import PyTorchModelHubMixin
 
 
 class SpanInteractionAttention(nn.Module):
@@ -96,7 +97,7 @@ class GnnerAT(BaseModel):
         return output
 
 
-class GnnerCONV(BaseModel):
+class GnnerCONV(BaseModel, PyTorchModelHubMixin):
     def __init__(self, labels, model_name, max_span_width, width_embedding_dim, project_dim):
         super().__init__(labels, model_name, max_span_width)
 

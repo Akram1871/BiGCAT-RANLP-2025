@@ -1,0 +1,10 @@
+torch==1.12.0
+torchvision==0.13.0
+torchaudio==0.12.0
+seqeval
+transformers==4.19.4
+allennlp==2.10.1
+pytorch_lightning==1.9.5
+tqdm>=4.62.3
+numpy>=1.19.5
+networkx==2.6
